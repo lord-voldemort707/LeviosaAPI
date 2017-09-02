@@ -1,4 +1,10 @@
 class PlayersController < ApplicationController
+  def index
+    @team_id = Team.find_by_code(params[:team_id])
+    @players = Player.where(team_id: @team_id)
+    render json: @players, status: :ok, include: ['player_seasons']
+  end
+
   def show
     @player = Player.find(params[:id])
     render json: @player, status: :ok, include: ['player_seasons']
