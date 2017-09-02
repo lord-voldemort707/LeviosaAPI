@@ -6,5 +6,6 @@ Rails.application.routes.draw do
         resources :data_source, only:[:index]
       end
     end
+    resources :data_sources, only: [:index]
   end
 end
