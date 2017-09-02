@@ -32,6 +32,9 @@ namespace :db do
         player_id: player.id
       }
       PlayerSeason.create!(player_season)
+      DataSource.create!(name: "EP",
+                         player_lookup: Faker::Number.between(1001, 20000),
+                         player_id: player.id)
     end
   end
 end

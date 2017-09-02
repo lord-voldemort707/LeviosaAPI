@@ -1,7 +1,7 @@
 class PlayersController < ApplicationController
   def show
     @player = Player.find(params[:id])
-    render json: @player, status: :ok, include: 'player_seasons'
+    render json: @player, status: :ok, include: ['player_seasons']
   end
 
   def create

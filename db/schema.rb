@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170710013109) do
+ActiveRecord::Schema.define(version: 20170902064827) do
+
+  create_table "data_sources", force: :cascade do |t|
+    t.string "name"
+    t.string "player_lookup"
+    t.integer "player_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["player_id"], name: "index_data_sources_on_player_id"
+  end
 
   create_table "player_seasons", force: :cascade do |t|
     t.string "season"
