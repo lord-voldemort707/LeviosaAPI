@@ -37,5 +37,7 @@ module Api
       end
     end
 
+    #TODO: This should be changed to roll over automatically every september
+    config.latest_season = '2016-2017'
   end
 end
