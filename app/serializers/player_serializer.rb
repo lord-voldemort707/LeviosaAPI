@@ -1,4 +1,4 @@
-class PlayersSerializer < ActiveModel::Serializer
+class PlayerSerializer < ActiveModel::Serializer
   attributes :id, :name, :position, :team_id, :player_seasons
 
   def player_seasons

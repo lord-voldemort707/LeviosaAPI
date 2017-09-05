@@ -7,7 +7,7 @@ class TeamSerializer < ActiveModel::Serializer
       players = object.players
     end
     players.map do | p |
-      PlayersSerializer.new(p, @instance_options).serializable_hash
+      PlayerSerializer.new(p, @instance_options).serializable_hash
     end
   end
 
